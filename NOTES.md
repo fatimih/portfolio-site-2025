@@ -44,7 +44,7 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
 - [x] Create `Home.jsx` placeholder page
 - [x] Create and commit `.gitignore` (if missing)
 - [x] Add `NOTES.md` to Git
-- [ ] (Optional) Set up path aliases in `vite.config.js`
+- [x] Set up path aliases in `vite.config.js`
 
 ### 🛠 Structure Ideas
 
