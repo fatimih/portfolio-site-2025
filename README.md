@@ -17,28 +17,30 @@
 
 ## 01_project_structure – Set Up Project Structure
 
-- [ ] 01.01 Create base folder structure: `components/`, `pages/`, `styles/`  
-- [ ] 01.02 Create `Home.jsx` placeholder page  
-- [ ] 01.03 Create and commit `.gitignore` (if missing)  
-- [ ] 01.04 Add `NOTES.md` to Git  
-- [ ] 01.05 (Optional) Set up path aliases in `vite.config.js`  
+- [x] 01.01 Create base folder structure: `components/`, `pages/`, `styles/`  
+- [x] 01.02 Create `Home.jsx` placeholder page  
+- [x] 01.03 Create and commit `.gitignore` (if missing)  
+- [x] 01.04 Add `NOTES.md` to Git  
+- [x] 01.05 (Optional) Set up path aliases in `vite.config.js`  
 
 ---
 
-## 02_global_styles – Set Up Global Styling
+## 02_app_routing – Configure Routing & Layout
 
-- [ ] 02.01 Create `base.css` in `styles/` and import in `main.jsx`  
-- [ ] 02.02 Define custom CSS reset and root variables  
-- [ ] 02.03 Add utility classes or Tailwind setup (if chosen)  
+- [x] 02.01 Install `react-router-dom`
+- [x] 02.02 Create routes: Home, About, Work, Contact
+- [x] 02.03 Build shared layout (header/footer)
+- [x] 02.04 Nest pages inside layout wrapper
 
 ---
 
-## 03_layout – Layout & Routing
+## 03_style_system – CSS Architecture *(completed early)*
 
-- [ ] 03.01 Create layout wrapper in `components/layout/`  
-- [ ] 03.02 Set up React Router with routes in `pages/`  
-- [ ] 03.03 Add `<Header />` and `<Footer />` components  
-- [ ] 03.04 Test layout and navigation  
+- [x] 03.01 Choose CSS approach (plain CSS)
+- [x] 03.02 Set up base/reset CSS
+- [x] 03.03 Create styles/ folder structure
+- [x] 03.04 Add root variables and utility classes
+- [x] 03.04 Choose and document naming convention (BEM, utility, etc.) 
 
 ---
 
