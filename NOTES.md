@@ -15,6 +15,33 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
 
 ---
 
+## 🔁 Routing Structure (Phase 02)
+
+- Created routes using `react-router-dom`:
+  - `/` → `Home.jsx`
+  - `/about` → `About.jsx`
+  - `/work` → `Work.jsx`
+  - `/contact` → `Contact.jsx`
+- Set up nested layout using `<Layout />` wrapper
+- Shared components:
+  - `Header.jsx` (contains `<Link>` navigation)
+  - `Footer.jsx` (site footer)
+
+---
+
+## 🏷 CSS Naming Convention (Phase 03)
+
+We're using a **Hybrid CSS naming convention**:
+
+- Semantic block names for sections: `.home-hero`, `.about-section`, `.contact-form`
+- BEM-style nesting for internal elements: `.about-section__title`, `.about-section__image`
+- Utility classes for spacing/typography/layout: `.text-center`, `.mb-4`, `.grid-2`
+
+This gives flexibility while keeping things organized and readable — a best practice for engineers working with plain CSS at scale.
+
+---
+
+
 ## 🪲 Bugs & Fixes
 
 - _(none yet)_
