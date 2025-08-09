@@ -15,6 +15,18 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
 
 ---
 
+## 📁 Phase 01 – Project Structure (WIP)
+
+### ✅ TODO
+
+- [x] Create base folder structure: `components/`, `pages/`, `styles/`
+- [x] Create `Home.jsx` placeholder page
+- [x] Create and commit `.gitignore` (if missing)
+- [x] Add `NOTES.md` to Git
+- [x] Set up path aliases in `vite.config.js`
+
+---
+
 ## 🔁 Routing Structure (Phase 02)
 
 - Created routes using `react-router-dom`:
@@ -39,12 +51,36 @@ We're using a **Hybrid CSS naming convention**:
 
 This gives flexibility while keeping things organized and readable — a best practice for engineers working with plain CSS at scale.
 
+---
+
 ## CSS Modules Policy (Phase 03)
 
 - Global styles remain in /styles (base, variables, utilities, section-level).
 - Component-specific styles live next to the component as *.module.css inside src/components/.
 - Naming inside modules: use `root` for the top element, and descriptive names for parts (e.g., `title`, `icon`).
 - Keep utilities global and reusable; modules should not redefine global utilities.
+
+---
+
+## CSS Conventions (Phase 04 and beyond)
+
+### CSS Modules Order Policy
+For each component-scoped CSS Module:
+
+1. **Base styles** — root element styles (layout, spacing, typography, borders, etc.).
+2. **States** — interaction and accessibility states (`:hover`, `:focus-visible`, `:disabled`, etc.).
+3. **Variants** — modifier classes (e.g., `.primary`, `.secondary`, `.danger`) that extend/override base styles.
+
+This ensures predictable overrides, avoids specificity issues, and matches BEM-like methodology used in industry design systems.
+
+### Base.css Integration Policy
+When creating or updating component styles in CSS Modules:
+
+1. **Check `base.css` first** for existing CSS variables (`--color-*`, `--space-*`, typography, etc.).
+2. **Wire styles to these tokens** instead of hardcoding values.
+3. Avoid redefining colors, spacing, or typography that already exist in `base.css`.
+4. Reserve hardcoded values for temporary development placeholders only — replace them with tokens before committing.
+5. Do not use inline styles for static appearance — use CSS Modules or tokens for maintainability and theming support.
 
 ---
 
@@ -69,16 +105,6 @@ This gives flexibility while keeping things organized and readable — a best pr
 - GitHub Pages deploy guide (if used): https://pages.github.com/
 
 ---
-
-## 📁 Phase 01 – Project Structure (WIP)
-
-### ✅ TODO
-
-- [x] Create base folder structure: `components/`, `pages/`, `styles/`
-- [x] Create `Home.jsx` placeholder page
-- [x] Create and commit `.gitignore` (if missing)
-- [x] Add `NOTES.md` to Git
-- [x] Set up path aliases in `vite.config.js`
 
 ### 🛠 Structure Ideas
 
