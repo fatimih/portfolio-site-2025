@@ -82,6 +82,12 @@ When creating or updating component styles in CSS Modules:
 4. Reserve hardcoded values for temporary development placeholders only — replace them with tokens before committing.
 5. Do not use inline styles for static appearance — use CSS Modules or tokens for maintainability and theming support.
 
+### Variant Visibility During Development
+When creating or testing a component variant, ensure its appearance is visibly different from the base style during development.  
+- Use contrasting tokens from `base.css` (e.g., `--color-muted`, `--color-accent`) to make the difference obvious.  
+- Do not rely on subtle changes that are hard to notice during testing.  
+- Variants can be adjusted to final design specs later, but during build they should be easy to verify visually.
+
 ---
 
 

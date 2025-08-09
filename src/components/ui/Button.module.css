@@ -29,6 +29,7 @@
 }
 
 .secondary {
-  background: transparent; /* outline look */
-  /* keeps border + color from .root */
+  background: transparent;
+  color: var(--color-muted);         /* lighter text from base.css */
+  border-color: var(--color-muted);  /* lighter border from base.css */
 }
