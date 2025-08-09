@@ -4,7 +4,7 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
 
 ---
 
-## ✅ TODO – Phase 00: Init Environment
+## ✅ TODO – 00_init_env – Initialize Environment
 
 - [x] 00.01 – Create root folder: `portfolio-site-2025`
 - [x] 00.02 – Create and store build roadmap in `README.md`
@@ -15,7 +15,7 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
 
 ---
 
-## 📁 Phase 01 – Project Structure (WIP)
+## 📁 01_project_structure – Define File Architecture
 
 ### ✅ TODO
 
@@ -27,7 +27,7 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
 
 ---
 
-## 🔁 Routing Structure (Phase 02)
+## 🔁 02_app_routing – Configure Routing & Layout
 
 - Created routes using `react-router-dom`:
   - `/` → `Home.jsx`
@@ -41,7 +41,7 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
 
 ---
 
-## 🏷 CSS Naming Convention (Phase 03)
+## 🏷 03_style_system – CSS Architecture — CSS Naming Convention
 
 We're using a **Hybrid CSS naming convention**:
 
@@ -53,7 +53,7 @@ This gives flexibility while keeping things organized and readable — a best pr
 
 ---
 
-## CSS Modules Policy (Phase 03)
+## 03_style_system – CSS Architecture — CSS Modules Policy
 
 - Global styles remain in /styles (base, variables, utilities, section-level).
 - Component-specific styles live next to the component as *.module.css inside src/components/.
@@ -62,7 +62,7 @@ This gives flexibility while keeping things organized and readable — a best pr
 
 ---
 
-## CSS Conventions (Phase 04 and beyond)
+## 04_ui_components – Reusable UI Elements — CSS Conventions
 
 ### CSS Modules Order Policy
 For each component-scoped CSS Module:
@@ -87,6 +87,23 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Use contrasting tokens from `base.css` (e.g., `--color-muted`, `--color-accent`) to make the difference obvious.  
 - Do not rely on subtle changes that are hard to notice during testing.  
 - Variants can be adjusted to final design specs later, but during build they should be easy to verify visually.
+
+**04.01 – Build common UI components**  
+- **Button**  
+  - Variants: `primary` (filled, `--color-accent` bg, white text), `secondary` (outline, `--color-muted` text & border)  
+  - Token-based colors, no inline styles, variant visibility rule applied.  
+
+- **Card**  
+  - Neutral container, `--color-bg`, `--color-text`, `--color-muted` border.  
+  - Padded with `var(--space-md)` and rounded corners.  
+
+- **Tag**  
+  - Variants: `default` (`--color-muted` bg, `--color-bg` text), `info` (`--color-accent` bg, white text).  
+  - Rounded pill shape (`border-radius: 9999px`).  
+
+- **SectionHeading**  
+  - Supports `level` prop for heading level (`h1`–`h6`).  
+  - Variants: `default` (`--color-text`), `accent` (`--color-accent`).  
 
 ---
 
@@ -117,5 +134,3 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Keep shared layout components in `components/layout/`
 - Use `pages/` for top-level routes only
 - Place `base.css` in `styles/` and import into `main.jsx`
-
-_Last synced with local NOTES.md on August 7, 2025._
