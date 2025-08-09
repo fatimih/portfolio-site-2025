@@ -1,8 +1,15 @@
 import styles from './Button.module.css';
 
-export default function Button({ as = 'button', className = '', children, ...props }) {
+export default function Button({ 
+  as = 'button', 
+  className = '', 
+  variant = 'secondary', 
+  children, 
+  ...props 
+}) {
   const Component = as;
-  const classes = `${styles.root}${className ? ' ' + className : ''}`;
+  const variantClass = styles[variant] || '';
+  const classes = `${styles.root} ${variantClass}${className ? ' ' + className : ''}`;
 
   return (
     <Component className={classes} {...props}>
