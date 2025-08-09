@@ -1,5 +1,22 @@
-/* temporary to verify module wiring */
+/* Neutral, accessible base styles — no design opinions */
 .root {
-  outline: 1px dashed red;
-  padding: 0.25rem;
+  display: inline-block;
+  font: inherit;              /* use site font */
+  line-height: 1;             /* tighter control */
+  padding: 0.5rem 0.75rem;    /* comfortable click target */
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  border-radius: 4px;         /* subtle rounding */
+  cursor: pointer;
+}
+
+.root:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.root:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
