@@ -1,6 +1,7 @@
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import Tag from '../components/ui/Tag';
+import SectionHeading from '../components/ui/SectionHeading';
 
 export default function Home() {
   return (
@@ -11,6 +12,9 @@ export default function Home() {
         <Tag>Neutral Tag</Tag>{' '}
         <Tag variant="info">Info Tag</Tag>
       </div>
+
+      <SectionHeading level={2}>Default Section Heading</SectionHeading>
+      <SectionHeading level={2} variant="accent">Accent Section Heading</SectionHeading>
 
       <Card>
         <h2>Card Title</h2>
