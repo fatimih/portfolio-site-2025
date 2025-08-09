@@ -1,0 +1,5 @@
+/* temporary to verify module wiring */
+.root {
+  outline: 1px dashed red;
+  padding: 0.25rem;
+}
