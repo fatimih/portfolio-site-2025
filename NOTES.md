@@ -39,6 +39,13 @@ We're using a **Hybrid CSS naming convention**:
 
 This gives flexibility while keeping things organized and readable — a best practice for engineers working with plain CSS at scale.
 
+## CSS Modules Policy (Phase 03)
+
+- Global styles remain in /styles (base, variables, utilities, section-level).
+- Component-specific styles live next to the component as *.module.css inside src/components/.
+- Naming inside modules: use `root` for the top element, and descriptive names for parts (e.g., `title`, `icon`).
+- Keep utilities global and reusable; modules should not redefine global utilities.
+
 ---
 
 
