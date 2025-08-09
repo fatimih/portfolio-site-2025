@@ -1,13 +1,13 @@
 /* Neutral, accessible base styles — no design opinions */
 .root {
   display: inline-block;
-  font: inherit;              /* use site font */
-  line-height: 1;             /* tighter control */
-  padding: 0.5rem 0.75rem;    /* comfortable click target */
+  font: inherit;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
   border: 1px solid currentColor;
   background: transparent;
   color: inherit;
-  border-radius: 4px;         /* subtle rounding */
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -19,4 +19,16 @@
 .root:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+/* Variants (token-driven) */
+.primary {
+  background: var(--color-accent);
+  color: #fff; /* readable on accent */
+  border-color: var(--color-accent);
+}
+
+.secondary {
+  background: transparent; /* outline look */
+  /* keeps border + color from .root */
 }
