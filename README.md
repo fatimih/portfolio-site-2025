@@ -46,7 +46,7 @@
 
 ## 04_ui_components – Reusable UI Elements
 - [x] 04.01 Build common UI components (Button, Card, Tag, SectionHeading)
-- [ ] 04.02 Organize by function/domain (`components/ui`, `components/forms`, etc.)
+- [x] 04.02 Organize by function/domain (`components/ui`, `components/forms`, etc.)
 - [ ] 04.03 Add basic form helpers (Input, Textarea, validation shell)
 - [ ] 04.04 Add icons/animations if needed
 
