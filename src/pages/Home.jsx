@@ -3,6 +3,7 @@ import Card from '../components/ui/Card';
 import Tag from '../components/ui/Tag';
 import SectionHeading from '../components/ui/SectionHeading';
 import Input from '../components/forms/Input';
+import Textarea from '../components/forms/Textarea';
 
 export default function Home() {
   return (
@@ -11,6 +12,15 @@ export default function Home() {
 
       <div className="mb-4">
         <Input id="demo-name" placeholder="Your name" aria-label="Your name" />
+      </div>
+
+      <div className="mb-4">
+        <Textarea
+         id="demo-message"
+         aria-label="Your message"
+         placeholder="Type a longer message…"
+         rows={5}
+        />
       </div>
 
 
