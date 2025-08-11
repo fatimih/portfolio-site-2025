@@ -122,6 +122,13 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Integrated `<Icon />` into `Button` component for testing.  
 - Added `animations.css` in `/styles` with fade-in, slide-up, and scale-in utilities using CSS variables and `prefers-reduced-motion` guard.  
 - Verified animation utilities by applying `anim-slide-up` to `Button` as a mount animation.
+**Icons scaffolding**
+- Created `components/icons/Icon.jsx` and `components/icons/index.js` barrel.
+- Updated `Button.jsx` to use `<Icon name="FaArrowRight" ... />` (decorative; `aria-hidden` handled internally).
+
+**Animations scaffolding**
+- Added `styles/animations.css` and imported it in `main.jsx`.
+- Button hover-lift to be tuned via CSS transition on `.root:hover` using tokens from `base.css`.
 
 ---
 
@@ -177,4 +184,3 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Keep shared layout components in `components/layout/`
 - Use `pages/` for top-level routes only
 - Place `base.css` in `styles/` and import into `main.jsx`
-- Added `src/features/` folder as a placeholder for domain-specific feature modules. See `src/features/README.md` for detailed guidance on usage and structure.

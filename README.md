@@ -17,7 +17,8 @@
 
 ## 01_project_structure – Define File Architecture
 
-- [x] 01.01 Create base folder structure: `components/`, `pages/`, `styles/`  
+- [x] 01.01 Create base folder structure: `components/`, `pages/`, `styles/`, `features/`
+> **Note:** See `src/features/README.md` for guidance on organizing domain-specific feature modules.
 - [x] 01.02 Create `Home.jsx` placeholder page  
 - [x] 01.03 Create and commit `.gitignore` (if missing)  
 - [x] 01.04 Add `NOTES.md` to Git  
@@ -48,7 +49,8 @@
 - [x] 04.01 Build common UI components (Button, Card, Tag, SectionHeading)
 - [x] 04.02 Organize by function/domain (`components/ui`, `components/forms`, etc.)
 - [x] 04.03 Add basic form helpers (Input, Textarea, validation shell)
-- [x] 04.04 Add icons/animations if needed
+- [x] 04.04 Add icons/animations if needed — scaffolded `components/icons/Icon.jsx` and `styles/animations.css`; hover effects to be tuned later.
+
 
 ---
 
@@ -86,3 +88,4 @@
 - [ ] 09.02 Add analytics (optional)
 - [ ] 09.03 Monitor performance and accessibility (Lighthouse)
 - [ ] 09.04 Plan improvements and backlog
+
