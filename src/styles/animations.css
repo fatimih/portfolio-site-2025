@@ -1,0 +1,55 @@
+/* Animation tokens */
+:root {
+  --anim-duration-100: 150ms;
+  --anim-duration-200: 300ms;
+  --anim-ease-standard: cubic-bezier(0.2, 0.0, 0, 1);
+  --anim-ease-emphasized: cubic-bezier(0.2, 0.0, 0, 1.2);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-in,
+  .anim-slide-up,
+  .anim-scale-in {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Keyframes */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Animation utility classes */
+.anim-fade-in {
+  animation: fade-in var(--anim-duration-200) var(--anim-ease-standard) both;
+}
+
+.anim-slide-up {
+  animation: slide-up var(--anim-duration-200) var(--anim-ease-standard) both;
+}
+
+.anim-scale-in {
+  animation: scale-in var(--anim-duration-200) var(--anim-ease-emphasized) both;
+}
+
+/* Optional overrides for duration */
+[data-anim-duration="100"] {
+  animation-duration: var(--anim-duration-100) !important;
+}
+
+[data-anim-duration="200"] {
+  animation-duration: var(--anim-duration-200) !important;
+}

@@ -111,6 +111,14 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Wired `ContactForm.module.css` for layout, spacing, and token-based styling  
 - Implemented lightweight validation shell (required fields + basic email check) with error styling and a11y attributes
 
+**04.04 – Add icons/animations (completed)**  
+- Installed `react-icons` for scalable, component-based icons.  
+- Created `src/components/icons/index.js` as a central icon registry.  
+- Added reusable `<Icon />` wrapper component for consistent size, a11y, and class handling.  
+- Integrated `<Icon />` into `Button` component for testing.  
+- Added `animations.css` in `/styles` with fade-in, slide-up, and scale-in utilities using CSS variables and `prefers-reduced-motion` guard.  
+- Verified animation utilities by applying `anim-slide-up` to `Button` as a mount animation.
+
 ---
 
 
