@@ -56,8 +56,8 @@
 
 ## 05_content – Add Core Pages and Sections
 - [x] 05.01 Build homepage structure
-- [ ] 05.02 Add About, Work, and Contact sections
-- [ ] 05.03 Wireframe content layout using semantic HTML
+- [x] 05.02 Add About, Work, and Contact sections
+- [x] 05.03 Wireframe content layout using semantic HTML
 
 ---
 

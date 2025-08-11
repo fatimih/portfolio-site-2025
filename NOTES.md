@@ -162,10 +162,12 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Add placeholder headings, paragraphs, and images  
 - Ensure each section has a unique `id` for anchor linking  
 
-**05.03 – Wireframe content layout using semantic HTML**  
-- Confirm heading hierarchy (H1–H3) is logical and accessible  
-- Use minimal placeholder styles for spacing and readability  
-- No colors, fonts, or design tweaks yet — focus on semantic structure only  
+**05.03 – Wireframe content layout using semantic HTML (completed)**  
+- Added `dev-placeholders.css` for temporary spacing and layout; imported into `main.jsx`.  
+- Verified heading hierarchy via `level={}` props in `<SectionHeading>` (H1 → H2 → H3 structure).  
+- Confirmed semantic HTML structure in all sections with accessible IDs.  
+- Deferred all design and final styling; placeholder styles kept isolated for removal later.
+ 
 
 **Engineering Notes**  
 - This phase is content skeleton only — styling beyond minimal spacing is deferred.  
