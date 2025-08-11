@@ -1,47 +1,62 @@
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import Tag from '../components/ui/Tag';
-import SectionHeading from '../components/ui/SectionHeading';
-import Input from '../components/forms/Input';
-import Textarea from '../components/forms/Textarea';
+import { Link } from "react-router-dom";
+import { SectionHeading, Card, Tag, Button } from "@/components/ui";
 
 export default function Home() {
   return (
-    <main className="container">
-      <h1>Home Page</h1>
+    <main id="home" className="home">
+      {/* Hero */}
+      <header className="home-hero" role="banner">
+        <SectionHeading level={1} variant="default">Hi, I’m [Your Name]</SectionHeading>
+        <p className="home-hero__intro">
+          I build performant, accessible web apps. This site showcases selected work and how I think.
+        </p>
+        <p className="home-hero__cta">
+          <Link to="/work">
+            <Button variant="primary">View Work</Button>
+          </Link>
+          <Link to="/contact" className="ml-2">
+            <Button variant="secondary">Get in Touch</Button>
+          </Link>
+        </p>
+      </header>
 
-      <div className="mb-4">
-        <Input id="demo-name" placeholder="Your name" aria-label="Your name" />
-      </div>
+      {/* About teaser */}
+      <section className="about-section" aria-labelledby="about-heading">
+        <SectionHeading level={2} variant="accent" id="about-heading">About</SectionHeading>
+        <p>
+          I focus on clean architecture, maintainable CSS, and DX. I like small, well-tested pieces over
+          big frameworks-for-everything.
+        </p>
+        <p><Link to="/about"><Button variant="secondary">More about me</Button></Link></p>
+      </section>
 
-      <div className="mb-4">
-        <Textarea
-         id="demo-message"
-         aria-label="Your message"
-         placeholder="Type a longer message…"
-         rows={5}
-        />
-      </div>
+      {/* Featured Work */}
+      <section className="work-section" aria-labelledby="work-heading">
+        <SectionHeading level={2} variant="accent" id="work-heading">Selected Work</SectionHeading>
 
+        <div className="work-section__grid">
+          <Card>
+            <Tag>Case Study</Tag>
+            <h3 className="work-section__item-title">Project Alpha</h3>
+            <p className="work-section__item-desc">Short one-liner about the impact/result.</p>
+            <Link to="/work"><Button variant="secondary">Read more</Button></Link>
+          </Card>
 
-      <div style={{ marginBottom: '16px' }}>
-        <Tag>Neutral Tag</Tag>{' '}
-        <Tag variant="info">Info Tag</Tag>
-      </div>
-
-      <SectionHeading level={2}>Default Section Heading</SectionHeading>
-      <SectionHeading level={2} variant="accent">Accent Section Heading</SectionHeading>
-
-      <Card>
-        <h2>Card Title</h2>
-        <p>This Card uses base.css tokens for background, text, and border.</p>
-        <div>
-          <Button variant="primary">Primary Button</Button>{' '}
-          <Button variant="secondary" as="a" href="https://example.com" target="_blank" rel="noreferrer">
-            Visit Link
-          </Button>
+          <Card>
+            <Tag>Open Source</Tag>
+            <h3 className="work-section__item-title">Library Beta</h3>
+            <p className="work-section__item-desc">What it solves and why it exists.</p>
+            <Link to="/work"><Button variant="secondary">Read more</Button></Link>
+          </Card>
         </div>
-      </Card>
+      </section>
+
+      {/* Contact teaser */}
+      <section className="contact-section" aria-labelledby="contact-heading">
+        <SectionHeading level={2} variant="accent" id="contact-heading">Contact</SectionHeading>
+        <p>Got a project or want to say hi?</p>
+        <p><Link to="/contact"><Button variant="primary">Contact me</Button></Link></p>
+      </section>
     </main>
   );
 }
