@@ -105,7 +105,10 @@ When creating or testing a component variant, ensure its appearance is visibly d
   - Supports `level` prop for heading level (`h1`–`h6`).  
   - Variants: `default` (`--color-text`), `accent` (`--color-accent`).  
 
-  **04.03 – Add basic form helpers (completed)**  
+- Extracted navigation links from `Header.jsx` into `components/navigation/Nav.jsx` for domain organization.
+
+
+**04.03 – Add basic form helpers (completed)**  
 - Added reusable `Input` and `Textarea` components with scoped CSS Modules  
 - Created `ContactForm` component using Input and Textarea  
 - Wired `ContactForm.module.css` for layout, spacing, and token-based styling  
@@ -120,6 +123,31 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Verified animation utilities by applying `anim-slide-up` to `Button` as a mount animation.
 
 ---
+
+## 05_content – Add Core Pages and Sections
+
+**05.01 – Build homepage structure**  
+- Create the semantic HTML layout for the homepage inside `Home.jsx`  
+- Use placeholder content only (no final copy or design)  
+- Ensure structure uses sectioning elements (`<header>`, `<section>`, `<footer>`, etc.)  
+- Apply relevant global utility classes from `/styles`  
+- Keep component imports organized by domain (UI elements, layout, etc.)  
+
+**05.02 – Add About, Work, and Contact sections**  
+- Create section components for each (`AboutSection.jsx`, `WorkSection.jsx`, `ContactSection.jsx`)  
+- Add placeholder headings, paragraphs, and images  
+- Ensure each section has a unique `id` for anchor linking  
+
+**05.03 – Wireframe content layout using semantic HTML**  
+- Confirm heading hierarchy (H1–H3) is logical and accessible  
+- Use minimal placeholder styles for spacing and readability  
+- No colors, fonts, or design tweaks yet — focus on semantic structure only  
+
+**Engineering Notes**  
+- This phase is content skeleton only — styling beyond minimal spacing is deferred.  
+- Follow the CSS naming convention from **03_style_system** (`.home-hero`, `.about-section`, `.contact-section`, etc.).  
+- Any temporary styles should go in `/styles/dev-placeholders.css` so they can be removed later without affecting production CSS.
+
 
 
 ## 🪲 Bugs & Fixes
