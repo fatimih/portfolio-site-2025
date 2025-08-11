@@ -1,7 +1,10 @@
+import { ContactForm } from '../components/forms';
+
 export default function Contact() {
   return (
-    <div>
-      <h1>Contact Page</h1>
-    </div>
+    <main className="container">
+      <h1>Contact</h1>
+      <ContactForm onSubmit={(values) => console.log('Form submitted', values)} />
+    </main>
   );
 }
