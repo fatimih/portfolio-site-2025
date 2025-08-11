@@ -130,6 +130,22 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Added `styles/animations.css` and imported it in `main.jsx`.
 - Button hover-lift to be tuned via CSS transition on `.root:hover` using tokens from `base.css`.
 
+**04_ui_components — Cleanup & Architecture Polish**
+
+- Removed unused Vite scaffold files:
+  - Deleted `src/App.jsx` and `src/App.css` (replaced by `Layout.jsx` and `/styles`).
+  - Deleted `src/index.css` (global styles moved to `/styles/base.css` and `/styles/animations.css`).
+- Added `.gitignore` to exclude `node_modules/`, build outputs, IDE files, and `.env` files.
+- Created barrel export files for:
+  - `src/components/ui/`
+  - `src/components/layout/`
+  - `src/components/navigation/`
+  - `src/components/icons/`
+- Documented `src/features/` folder:
+  - Added `.keep` file to ensure folder stays in Git.
+  - Created `src/features/README.md` explaining folder purpose and suggested structure.
+  - Updated root README.md and NOTES.md to reference `features/` usage.
+
 ---
 
 ## 05_content – Add Core Pages and Sections
