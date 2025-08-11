@@ -2,11 +2,17 @@ import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import Tag from '../components/ui/Tag';
 import SectionHeading from '../components/ui/SectionHeading';
+import Input from '../components/forms/Input';
 
 export default function Home() {
   return (
     <main className="container">
       <h1>Home Page</h1>
+
+      <div className="mb-4">
+        <Input id="demo-name" placeholder="Your name" aria-label="Your name" />
+      </div>
+
 
       <div style={{ marginBottom: '16px' }}>
         <Tag>Neutral Tag</Tag>{' '}
