@@ -20,6 +20,7 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
 ### ✅ TODO
 
 - [x] Create base folder structure: `components/`, `pages/`, `styles/`
+- Added `src/features/` folder as a placeholder for domain-specific feature modules, with its own README explaining usage and structure.
 - [x] Create `Home.jsx` placeholder page
 - [x] Create and commit `.gitignore` (if missing)
 - [x] Add `NOTES.md` to Git
@@ -176,3 +177,4 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Keep shared layout components in `components/layout/`
 - Use `pages/` for top-level routes only
 - Place `base.css` in `styles/` and import into `main.jsx`
+- Added `src/features/` folder as a placeholder for domain-specific feature modules. See `src/features/README.md` for detailed guidance on usage and structure.
