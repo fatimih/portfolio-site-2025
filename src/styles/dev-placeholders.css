@@ -1,0 +1,26 @@
+/* DEV-ONLY: remove before final design */
+main.home {
+  display: block;
+}
+
+/* Section spacing for readability */
+.home-hero,
+.about-section,
+.work-section,
+.contact-section {
+  margin-block: var(--space-2xl);
+}
+
+/* Simple grid for work cards */
+.work-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+/* Light vertical rhythm inside sections */
+.home-hero p,
+.about-section p,
+.contact-section p {
+  ma
+
