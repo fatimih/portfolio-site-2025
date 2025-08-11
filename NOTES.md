@@ -105,6 +105,12 @@ When creating or testing a component variant, ensure its appearance is visibly d
   - Supports `level` prop for heading level (`h1`–`h6`).  
   - Variants: `default` (`--color-text`), `accent` (`--color-accent`).  
 
+  **04.03 – Add basic form helpers (completed)**  
+- Added reusable `Input` and `Textarea` components with scoped CSS Modules  
+- Created `ContactForm` component using Input and Textarea  
+- Wired `ContactForm.module.css` for layout, spacing, and token-based styling  
+- Implemented lightweight validation shell (required fields + basic email check) with error styling and a11y attributes
+
 ---
 
 
