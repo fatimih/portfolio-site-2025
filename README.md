@@ -2,6 +2,33 @@
 
 🛠️ Build Pipeline Overview
 
+## Architecture Overview
+
+This project is a modern React application built with **Vite**, following a clear separation of concerns and scalable frontend architecture patterns.
+
+### Stack
+- **React** (component-based UI)
+- **Vite** (development server and build pipeline)
+- **React Router** (client-side routing with nested layouts)
+- **CSS Modules + global tokens** (scoped styles with a shared design system)
+- **ESLint** (code quality)
+
+### Project Structure
+- `src/pages/` — route-level components (Home, About, Work, Contact)
+- `src/components/` — reusable UI, layout, navigation, and form components
+- `src/features/` — domain-specific feature modules (documented for future expansion)
+- `src/styles/` — global styles, tokens, utilities, and animations
+- `src/routes.jsx` — centralized route definitions and layout composition
+- `src/main.jsx` — application entry point (React bootstrap + router provider)
+
+### Routing Architecture
+Routing is intentionally centralized in `src/routes.jsx` to keep the entry point (`main.jsx`) focused solely on application bootstrap.
+
+This mirrors common production patterns and framework-level routing systems (e.g. Next.js), while remaining framework-agnostic within a Vite + React setup.
+
+For detailed architectural decisions and implementation notes, see **`NOTES.md`**.
+
+
 ---
 
 ## 00_init_env – Initialize Environment ✅
