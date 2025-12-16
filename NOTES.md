@@ -40,6 +40,23 @@ This is your working notes file for the `portfolio-site-2025` project. Use this 
   - `Header.jsx` (contains `<Link>` navigation)
   - `Footer.jsx` (site footer)
 
+  ### Routing Architecture Decision
+
+Routing is intentionally centralized in `src/routes.jsx` to separate application structure from the entry point.
+
+- `src/main.jsx` is responsible only for:
+  - bootstrapping React
+  - initializing the router provider
+  - loading global styles
+
+- `src/routes.jsx` defines:
+  - route hierarchy
+  - layout composition
+  - page-to-route mapping
+
+This separation improves readability and scalability, and mirrors patterns used by framework-level routing systems (e.g. Next.js file-based routing), while remaining framework-agnostic in a Vite + React setup.
+
+
 ---
 
 ## 🏷 03_style_system – CSS Architecture — CSS Naming Convention
