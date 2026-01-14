@@ -7,6 +7,7 @@ import Button from '../ui/Button';
 export default function ContactForm({ onSubmit }) {
   const [values, setValues] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState({ state: 'idle', message: '' });
 
   function validateField(name, value) {
     switch (name) {
@@ -50,15 +51,36 @@ export default function ContactForm({ onSubmit }) {
     });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+
     const nextErrors = validateAll(values);
     setErrors(nextErrors);
-    if (Object.keys(nextErrors).length === 0) {
-      if (onSubmit) onSubmit(values);
-      console.log('Contact form submitted:', values);
+
+    if (Object.keys(nextErrors).length !== 0) {
+      setStatus({ state: 'idle', message: '' });
+      return;
+    }
+
+    try {
+      setStatus({ state: 'submitting', message: '' });
+
+      if (onSubmit) {
+        await onSubmit(values);
+      }
+
+      setStatus({ state: 'success', message: 'Message sent (placeholder).' });
+      setValues({ name: '', email: '', message: '' });
+    } catch {
+
+      setStatus({
+        state: 'error',
+        message: 'Something went wrong. Please try again.',
+      });
     }
   }
+
+
 
   return (
     <form onSubmit={handleSubmit} className={styles.root} noValidate>
@@ -121,7 +143,14 @@ export default function ContactForm({ onSubmit }) {
         )}
       </div>
 
-      <Button type="submit" variant="primary">Send</Button>
+      <Button
+        type="submit"
+        variant="primary"
+        disabled={status.state === 'submitting'}
+      >
+        {status.state === 'submitting' ? 'Sending…' : 'Send'}
+      </Button>
+
     </form>
   );
 }

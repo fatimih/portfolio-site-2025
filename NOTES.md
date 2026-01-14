@@ -192,6 +192,29 @@ When creating or testing a component variant, ensure its appearance is visibly d
 - Any temporary styles should go in `/styles/dev-placeholders.css` so they can be removed later without affecting production CSS.
 
 
+## ✅ Phase 06 – Interactivity (Completed)
+
+**06.01 – Scroll behavior**
+- Centralized scroll logic in `useScrollSpy`
+- RAF-throttled scroll listener with cleanup
+- Tracks scrollY, direction, isAtTop, and active section
+- No UI coupling yet (ready for nav integration later)
+
+**06.02 – Contact form handling**
+- Controlled inputs with field-level validation
+- Required fields and email format checks
+- Async-safe submit lifecycle (idle → submitting → success/error)
+- Button disabled during submission
+- Clean separation between validation and submission logic
+- Ready to wire to backend or email service later
+
+**06.03 – Interactive component**
+- Added accessible Modal scaffold (keyboard Escape, backdrop click, focus handling)
+- Verified behavior in dev via temporary test mount
+- Removed dev-only UI after verification
+- Modal component retained for future reuse
+
+
 
 ## 🪲 Bugs & Fixes
 
